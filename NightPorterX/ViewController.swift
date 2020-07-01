@@ -40,6 +40,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.title = "First VC"
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -64,6 +65,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         switch indexPath.section {
         case 0:
             cell.textLabel?.text = dailyTasks[indexPath.row]
+            cell.imageView?.image = UIImage(named: "whatsapp")
+            cell.accessoryType = .disclosureIndicator
         case 1:
             cell.textLabel?.text = weeklyTasks[indexPath.row]
         case 2:
